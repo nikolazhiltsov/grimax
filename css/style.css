@@ -1247,6 +1247,7 @@ textarea {
 @media only screen and (min-width: 426px) and (max-width: 900px) {
   .main-background__line .line {
     min-width: 949px;
+    min-height: 790px;
   }
 }
 
