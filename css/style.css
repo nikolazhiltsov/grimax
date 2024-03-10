@@ -1240,20 +1240,13 @@ textarea {
     -webkit-transform: translate(12%, -15%);
         -ms-transform: translate(12%, -15%);
             transform: translate(12%, -15%);
-    width: 580px;
-  }
-}
-
-@media only screen and (min-width: 426px) and (max-width: 900px) {
-  .main-background__line .line {
-    min-width: 949px;
-    min-height: 790px;
   }
 }
 
 @media only screen and (max-height: 650px) {
   .main-background__line .line {
     max-width: 594.42px;
+    min-width: 594.42px;
   }
 
   .wrapper {
