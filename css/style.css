@@ -351,6 +351,7 @@ textarea {
 
 :root {
   --min-height: 650px;
+  --max-height: 1040px;
 }
 
 .main-background {
@@ -395,18 +396,16 @@ textarea {
   right: 0px;
   background-position: right;
   background-size: 100% 100%;
-  -webkit-animation: stars-r 6s ease-in-out infinite;
-          animation: stars-r 6s ease-in-out infinite;
 }
 
 .main-background__astronaut {
   max-width: 400px;
   position: absolute;
-  top: 50%;
-  right: 13%;
-  -webkit-transform: translateY(-50%) rotate(0deg);
-      -ms-transform: translateY(-50%) rotate(0deg);
-          transform: translateY(-50%) rotate(0deg);
+  bottom: 50%;
+  right: 180px;
+  -webkit-transform: translateY(50%) rotate(0deg);
+      -ms-transform: translateY(50%) rotate(0deg);
+          transform: translateY(50%) rotate(0deg);
   z-index: 3;
   -webkit-animation: astro 6s ease-in-out infinite;
           animation: astro 6s ease-in-out infinite;
@@ -430,80 +429,175 @@ textarea {
 .main-background__line .line {
   position: absolute;
   right: 0px;
-  max-width: 91.45vh;
+  width: 91.45vh;
   height: 100%;
-  width: 100%;
 }
 
 @-webkit-keyframes astro {
   0% {
-    -webkit-transform: translateY(-50%) rotate(0deg);
-            transform: translateY(-50%) rotate(0deg);
+    -webkit-transform: translateY(50%) rotate(0);
+            transform: translateY(50%) rotate(0);
   }
 
   50% {
-    -webkit-transform: translateY(-55%) rotate(10deg);
-            transform: translateY(-55%) rotate(10deg);
+    -webkit-transform: translateY(55%) rotate(10deg);
+            transform: translateY(55%) rotate(10deg);
   }
 }
 
 @keyframes astro {
   0% {
-    -webkit-transform: translateY(-50%) rotate(0deg);
-            transform: translateY(-50%) rotate(0deg);
+    -webkit-transform: translateY(50%) rotate(0);
+            transform: translateY(50%) rotate(0);
   }
 
   50% {
-    -webkit-transform: translateY(-55%) rotate(10deg);
-            transform: translateY(-55%) rotate(10deg);
+    -webkit-transform: translateY(55%) rotate(10deg);
+            transform: translateY(55%) rotate(10deg);
   }
 }
 
-@-webkit-keyframes stars-l {
+@-webkit-keyframes planet1 {
   0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    -webkit-transform: rotate(0deg) translate(0, 0);
+            transform: rotate(0deg) translate(0, 0);
   }
 
   50% {
-    -webkit-transform: rotate(-2deg);
-            transform: rotate(-2deg);
+    -webkit-transform: rotate(-15deg) translate(-30%, 15%);
+            transform: rotate(-15deg) translate(-30%, 15%);
   }
 }
 
-@keyframes stars-l {
+@keyframes planet1 {
   0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    -webkit-transform: rotate(0deg) translate(0, 0);
+            transform: rotate(0deg) translate(0, 0);
   }
 
   50% {
-    -webkit-transform: rotate(-2deg);
-            transform: rotate(-2deg);
+    -webkit-transform: rotate(-15deg) translate(-30%, 15%);
+            transform: rotate(-15deg) translate(-30%, 15%);
   }
 }
 
-@-webkit-keyframes stars-r {
+@-webkit-keyframes planet2 {
   0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
 
   50% {
-    -webkit-transform: rotate(-1.5deg);
-            transform: rotate(-1.5deg);
+    -webkit-transform: translateY(15%);
+            transform: translateY(15%);
   }
 }
 
-@keyframes stars-r {
+@keyframes planet2 {
   0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
 
   50% {
-    -webkit-transform: rotate(-1.5deg);
-            transform: rotate(-1.5deg);
+    -webkit-transform: translateY(15%);
+            transform: translateY(15%);
+  }
+}
+
+@-webkit-keyframes planet3 {
+  0% {
+    -webkit-transform: translateY(0) rotate(0);
+            transform: translateY(0) rotate(0);
+  }
+
+  50% {
+    -webkit-transform: translateY(15%) rotate(15deg);
+            transform: translateY(15%) rotate(15deg);
+  }
+}
+
+@keyframes planet3 {
+  0% {
+    -webkit-transform: translateY(0) rotate(0);
+            transform: translateY(0) rotate(0);
+  }
+
+  50% {
+    -webkit-transform: translateY(15%) rotate(15deg);
+            transform: translateY(15%) rotate(15deg);
+  }
+}
+
+@-webkit-keyframes planet4 {
+  0% {
+    -webkit-transform: translate(0%, 0%) rotate(0);
+            transform: translate(0%, 0%) rotate(0);
+  }
+
+  50% {
+    -webkit-transform: translate(-18%, 15%) rotate(25deg);
+            transform: translate(-18%, 15%) rotate(25deg);
+  }
+}
+
+@keyframes planet4 {
+  0% {
+    -webkit-transform: translate(0%, 0%) rotate(0);
+            transform: translate(0%, 0%) rotate(0);
+  }
+
+  50% {
+    -webkit-transform: translate(-18%, 15%) rotate(25deg);
+            transform: translate(-18%, 15%) rotate(25deg);
+  }
+}
+
+@-webkit-keyframes planet5 {
+  0% {
+    -webkit-transform: translate(0%, 0%) rotate(0);
+            transform: translate(0%, 0%) rotate(0);
+  }
+
+  50% {
+    -webkit-transform: translate(-22%, -25%) rotate(28deg);
+            transform: translate(-22%, -25%) rotate(28deg);
+  }
+}
+
+@keyframes planet5 {
+  0% {
+    -webkit-transform: translate(0%, 0%) rotate(0);
+            transform: translate(0%, 0%) rotate(0);
+  }
+
+  50% {
+    -webkit-transform: translate(-22%, -25%) rotate(28deg);
+            transform: translate(-22%, -25%) rotate(28deg);
+  }
+}
+
+@-webkit-keyframes planet6 {
+  0% {
+    -webkit-transform: translate(0%, 0%) rotate(0);
+            transform: translate(0%, 0%) rotate(0);
+  }
+
+  50% {
+    -webkit-transform: translate(40%, -25%) rotate(15deg);
+            transform: translate(40%, -25%) rotate(15deg);
+  }
+}
+
+@keyframes planet6 {
+  0% {
+    -webkit-transform: translate(0%, 0%) rotate(0);
+            transform: translate(0%, 0%) rotate(0);
+  }
+
+  50% {
+    -webkit-transform: translate(40%, -25%) rotate(15deg);
+            transform: translate(40%, -25%) rotate(15deg);
   }
 }
 
@@ -513,6 +607,8 @@ textarea {
 .planet {
   width: 80px;
   height: 80px;
+  -webkit-animation: planet1 6s ease-in-out infinite;
+          animation: planet1 6s ease-in-out infinite;
   top: 5%;
   left: 5%;
 }
@@ -525,6 +621,8 @@ textarea {
   height: 180px;
   top: 70%;
   left: 0%;
+  -webkit-animation: planet2 6s ease-in-out infinite;
+          animation: planet2 6s ease-in-out infinite;
 }
 
 .no-webp .sat {
@@ -535,6 +633,8 @@ textarea {
   height: 200px;
   top: 5%;
   left: 58%;
+  -webkit-animation: planet3 8.5s ease-in-out infinite;
+          animation: planet3 8.5s ease-in-out infinite;
 }
 
 .no-webp .moon {
@@ -545,6 +645,8 @@ textarea {
   height: 100px;
   top: 50%;
   left: 60%;
+  -webkit-animation: planet5 5s ease-in-out infinite;
+          animation: planet5 5s ease-in-out infinite;
 }
 
 .no-webp .earth {
@@ -555,6 +657,8 @@ textarea {
   height: 250px;
   bottom: -50px;
   left: 56%;
+  -webkit-animation: planet4 7.5s ease-in-out infinite;
+          animation: planet4 7.5s ease-in-out infinite;
 }
 
 .no-webp .earth2 {
@@ -565,6 +669,8 @@ textarea {
   height: 180px;
   right: 4%;
   top: 6%;
+  -webkit-animation: planet6 10s ease-in-out infinite;
+          animation: planet6 10s ease-in-out infinite;
 }
 
 .no-webp .merc {
@@ -573,6 +679,8 @@ textarea {
 .merc {
   width: 140px;
   height: 140px;
+  -webkit-animation: planet1 6s ease-in-out infinite;
+          animation: planet1 6s ease-in-out infinite;
   right: 4%;
   top: 48%;
 }
@@ -785,6 +893,7 @@ textarea {
   -o-transition: opacity 0.5s;
   transition: opacity 0.5s;
   padding: 0 15px;
+  overflow: hidden;
 }
 
 .no-webp .modal__box {
@@ -798,8 +907,12 @@ textarea {
   border-radius: 15px;
   background-size: cover;
   background-position: center;
+  position: relative;
   margin: auto;
-  margin-top: 100px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 .modal h2 {
@@ -868,11 +981,6 @@ textarea {
     top: 0;
   }
 
-  .main-background .stars-left {
-    -webkit-animation: stars-l 6s ease-in-out infinite;
-            animation: stars-l 6s ease-in-out infinite;
-  }
-
   .main-background__line {
     top: -3px;
   }
@@ -886,9 +994,23 @@ textarea {
   }
 }
 
+@media only screen and (max-width: 1640px) {
+  main {
+    max-height: var(--max-height);
+  }
+
+  .main-background {
+    max-height: var(--max-height);
+  }
+}
+
 @media (max-width: 1440px) {
   .main-background__astronaut {
     max-width: calc(180px + 220 * ((100vw - 320px) / 1440));
+  }
+
+  .main-background__astronaut {
+    right: calc(80px + 100 * ((100vw - 320px) / 1440));
   }
 
   .main-content__logotip {
@@ -913,10 +1035,6 @@ textarea {
 }
 
 @media only screen and (max-width: 1440px) {
-  .main-background__astronaut {
-    right: 10%;
-  }
-
   .main-content__links {
     margin-top: 1.8em;
   }
@@ -927,6 +1045,10 @@ textarea {
 }
 
 @media only screen and (max-width: 1280px) {
+  .main-background__line .line {
+    max-width: 950px;
+  }
+
   .main-content {
     left: 5%;
   }
@@ -938,10 +1060,6 @@ textarea {
 }
 
 @media only screen and (max-width: 1024px) {
-  .main-background__astronaut {
-    right: 4%;
-  }
-
   .sat {
     width: 150px;
     height: 150px;
@@ -978,29 +1096,6 @@ textarea {
 }
 
 @media only screen and (max-width: 768px) {
-@-webkit-keyframes stars-r {
-    0% {
-      -webkit-transform: rotate(90deg) translateX(10%);
-              transform: rotate(90deg) translateX(10%);
-    }
-
-    50% {
-      -webkit-transform: rotate(92deg) translateX(10%);
-              transform: rotate(92deg) translateX(10%);
-    }
-}
-@keyframes stars-r {
-    0% {
-      -webkit-transform: rotate(90deg) translateX(10%);
-              transform: rotate(90deg) translateX(10%);
-    }
-
-    50% {
-      -webkit-transform: rotate(92deg) translateX(10%);
-              transform: rotate(92deg) translateX(10%);
-    }
-}
-
   .sat {
     left: 32%;
   }
@@ -1046,7 +1141,7 @@ textarea {
   .main-background__astronaut {
     max-width: 140px;
     right: 6%;
-    top: 75%;
+    bottom: 25%;
   }
 
   .main-background__line .line {
@@ -1137,11 +1232,21 @@ textarea {
 }
 
 @media only screen and (max-width: 768px) and (min-width: 426px) {
+  .main-background .stars-left {
+    background-size: cover;
+  }
+
   .main-background__line .line {
     -webkit-transform: translate(12%, -15%);
         -ms-transform: translate(12%, -15%);
             transform: translate(12%, -15%);
     width: 580px;
+  }
+}
+
+@media only screen and (min-width: 426px) and (max-width: 900px) {
+  .main-background__line .line {
+    min-width: 949px;
   }
 }
 
